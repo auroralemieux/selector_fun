@@ -15,9 +15,11 @@ h1, h2, h3 {
 p {
   padding: 10px;
 }
+
 header {
   background-color: pink;
   text-align: center;
+  margin-top: -35px;
 }
 
 header li, footer li {
@@ -27,13 +29,15 @@ header li, footer li {
 
 footer {
   text-align: center;
+  background-color: pink;
+  padding: 10px;
 }
 
 /* Center Everything in Header  and footer */
 
 
 /* All Text to Helvetica */
-* {
+body {
   font-family: Helvetica;
 }
 
@@ -94,19 +98,28 @@ section > img:first-child {
 /* The Top-Most Top Cat Should have a Golden Background */
 aside#top-cats section:nth-child(2), aside#top-cats section:nth-child(2) > p {
   background-color: gold;
+  padding-top: 5px;
+  margin-bottom: -10px;
 }
 
 
 /* The 2nd-Most Top Cat Should have a Silver/gray Background */
 aside#top-cats section:nth-child(3), aside#top-cats section:nth-child(3) > p {
+  margin-bottom: -10px;
+  padding-top: 5px;
   background-color: silver;
+}
+
+aside#top-cats section:nth-child(3) > p, aside + section > p {
+  padding-bottom: 20px;
 }
 
 /* The 3rd-Most Top Cat Should have a Bronze/brown Background */
 aside + section, aside + section > p {
+  margin-bottom: -10px;
+  padding-top: 5px;
   background-color: brown;
 }
-
 
 /* Every other Article's Post-Content Background Color to a Light Grey */
 img+p:nth-of-type(2n+2) {
@@ -116,6 +129,7 @@ img+p:nth-of-type(2n+2) {
 /* All Top Kitten's Profile Photos Rounded */
 #top-cats img, #top-cats+section img {
   border-radius: 50%;
+  max-width: 100px;
 }
 
 /*** BONUS ***/
@@ -160,19 +174,51 @@ p {
 footer li {
   display: inline-block;
   margin: 0 30px;
+  padding-bottom: 10px;
 }
 
+body > header > h1 {
+  margin-bottom: 0;
+  /*margin-top; 10px;*/
+  padding-top: 20px;
+}
 header li {
   display: inline-block;
-  margin: 0 30px 30px 30px;
+  margin: 0px 30px 30px 30px;
+  /*border-top-left-radius: 5px;*/
+  /*border-top-left-radius: 5px;*/
+  background-color: white;
+}
+
+header a, footer a {
+  text-decoration: none;
+  padding: 5px 10px 5px 10px;
+  background-color: white;
+  border-radius: 5px;
+  color: grey;
+}
+
+header a:hover, footer a:hover {
+  color: pink;
+  background-color: grey;
 }
 
 main > h2 {
   background-color: grey;
+  text-align: center;
   color: pink;
 }
 
 main h1:first-child {
   padding-bottom: 0;
   margin-bottom: -20px;
+  text-align: center;
+}
+
+#top-cats > section {
+  margin-top: 10px;
+}
+
+#top-cats > h2 {
+  text-align: center;
 }
