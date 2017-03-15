@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 /*Without changing anything in the html, add the following styles using advanced selectors*/
 
 
@@ -122,7 +123,10 @@ aside + section, aside + section > p {
 }
 
 /* Every other Article's Post-Content Background Color to a Light Grey */
-img+p:nth-of-type(2n+2) {
+/*img+p:nth-of-type(2n+2) {
+  background-color: lightgrey;
+}*/
+article:nth-of-type(even) {
   background-color: lightgrey;
 }
 
