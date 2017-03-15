@@ -2,6 +2,19 @@
 
 
 /* Give the Header element a background color */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  padding: 0 10px;
+}
+
+p {
+  padding: 10px;
+}
 header {
   background-color: pink;
   text-align: center;
@@ -96,7 +109,7 @@ aside + section, aside + section > p {
 
 
 /* Every other Article's Post-Content Background Color to a Light Grey */
-img+p {
+img+p:nth-of-type(2n+2) {
   background-color: lightgrey;
 }
 
@@ -121,4 +134,45 @@ h2+h3 > a::before, article p > time + a::before {
 /* Use Google Fonts to Change h1 & h2 fonts to Lobster */
 h1, h2 {
   font-family: 'Lobster';
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2em;
+}
+
+img:hover {
+  -webkit-filter: invert(1);
+}
+
+img {
+  text-align: center;
+  background-color: pink;
+  margin: 20px;
+  width: 25%;
+}
+
+p {
+  text-align: justify;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 30px;
+}
+
+header li {
+  display: inline-block;
+  margin: 0 30px 30px 30px;
+}
+
+main > h2 {
+  background-color: grey;
+  color: pink;
+}
+
+main h1:first-child {
+  padding-bottom: 0;
+  margin-bottom: -20px;
 }
